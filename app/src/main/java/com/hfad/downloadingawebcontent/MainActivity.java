@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.connect();
 
-                //get the input stream reader to read from the site
+                //use the inputstream to obtain the stream through the connection
                 InputStream inputStream = urlConnection.getInputStream();
 
-                //create a bitmap decoder to translate the input stream into bitmap data type
+                //use the bitmap decoder to translate the inputstream into a bitmap data type
                 Bitmap myBitmap = BitmapFactory.decodeStream(inputStream);
 
                 return myBitmap;
